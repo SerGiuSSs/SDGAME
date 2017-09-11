@@ -53,6 +53,7 @@ using namespace ::std;
 
  //1. Ñòàðò
 void Start() {
+v = 1;
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 	system("cls");
 	gotoxy(41, 7);
@@ -65,7 +66,171 @@ void Start() {
 		cout << "ÑÅÐÃÅÉ";
 		gotoxy(47, 17);
 		cout << " ÂÎÂÀ";
+
+		if (v == 1) {
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+
+			gotoxy(47, 15);
+			cout << "ÑÅÐÃÅÉ";
+			gotoxy(47, 17);
+			cout << " ÂÎÂÀ";
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 10);
+			gotoxy(47, 13);
+			cout << " ÄÈÌÀ ";
+		}
+		else
+			if (v == 2) {
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+				gotoxy(47, 13);
+				cout << " ÄÈÌÀ ";
+	
+				gotoxy(47, 17);
+				cout << " ÂÎÂÀ";
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 10);
+				gotoxy(47, 15);
+				cout << "ÑÅÐÃÅÉ";
+			}
+			else
+				if (v == 3) {
+					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+					gotoxy(47, 13);
+					cout << " ÄÈÌÀ ";
+					gotoxy(47, 15);
+					cout << "ÑÅÐÃÅÉ";
+	
+					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 10);
+					gotoxy(47, 17);
+					cout << " ÂÎÂÀ";
+				}
+
+		// Ýòî îáðàáîò÷èê íàæàòèé
+		if (_kbhit()) {
+			switch (_getch()) {
+			case 'w': {
+				if (v == 1)
+					v = 3;
+				else
+					if (v == 2)
+						v = 1;
+					else
+						if (v == 3)
+							v = 2;
+				break;
+			}
+			case 's': {
+				if (v == 1)
+					v = 2;
+				else
+					if (v == 2)
+						v = 3;
+					else
+						if (v == 3)
+							v = 1;
+				break;
+			}
+			case 'W': {
+				if (v == 1)
+					v = 3;
+				else
+					if (v == 2)
+						v = 1;
+					else
+						if (v == 3)
+							v = 2;
+				break;
+			}
+			case 'S': {
+				if (v == 1)
+					v = 2;
+				else
+					if (v == 2)
+						v = 3;
+					else
+						if (v == 3)
+							v = 1;
+				break;
+			}
+			case 'ö': {
+				if (v == 1)
+					v = 3;
+				else
+					if (v == 2)
+						v = 1;
+					else
+						if (v == 3)
+							v = 2;
+				break;
+			}
+			case 'û': {
+				if (v == 1)
+					v = 2;
+				else
+					if (v == 2)
+						v = 3;
+					else
+						if (v == 3)
+							v = 1;
+				break;
+			}
+			case 'Ö': {
+				if (v == 1)
+					v = 3;
+				else
+					if (v == 2)
+						v = 1;
+					else
+						if (v == 3)
+							v = 2;
+				break;
+			}
+			case 'Û': {
+				if (v == 1)
+					v = 2;
+				else
+					if (v == 2)
+						v = 3;
+					else
+						if (v == 3)
+							v = 1;
+				break;
+			}
+			case 72: {
+				if (v == 1)
+					v = 3;
+				else
+					if (v == 2)
+						v = 1;
+					else
+						if (v == 3)
+							v = 2;
+				break;
+			}
+			case 80: {
+				if (v == 1)
+					v = 2;
+				else
+					if (v == 2)
+						v = 3;
+					else
+						if (v == 3)
+							v = 1;
+				break;
+			}
+			case 13: {
+				if (v == 1)
+					Start();
+				else
+					if (v == 2)
+						Load();
+					else
+						if (v == 3)
+							Quit();
+				break;
+			}
+			}
+
 	}
+}
 }
  //2. Çàãðóçèòü ñîõðàíåíèå
 void Load() {
