@@ -50,7 +50,8 @@ using namespace ::std;
 
 
 void Start() {
-
+	gotoxy(50, 7);
+	cout << "Выберите персонажа";
 }
 void Load() {
 	v = 1;
