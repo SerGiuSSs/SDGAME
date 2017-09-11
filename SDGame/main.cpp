@@ -1,6 +1,6 @@
 #include "main.h"
 int main() {
-	podgotovka();
+	podgotovka(); //Привет от Димы
 	Menu();
 	
 	return 0;
