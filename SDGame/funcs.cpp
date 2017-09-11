@@ -145,6 +145,50 @@ void Load() {
 							v = 1;
 				break;
 			}
+			case 'ö': {
+				if (v == 1)
+					v = 3;
+				else
+					if (v == 2)
+						v = 1;
+					else
+						if (v == 3)
+							v = 2;
+				break;
+			}
+			case 'û': {
+				if (v == 1)
+					v = 2;
+				else
+					if (v == 2)
+						v = 3;
+					else
+						if (v == 3)
+							v = 1;
+				break;
+			}
+			case 'Ö': {
+				if (v == 1)
+					v = 3;
+				else
+					if (v == 2)
+						v = 1;
+					else
+						if (v == 3)
+							v = 2;
+				break;
+			}
+			case 'Û': {
+				if (v == 1)
+					v = 2;
+				else
+					if (v == 2)
+						v = 3;
+					else
+						if (v == 3)
+							v = 1;
+				break;
+			}
 			case 13: {
 				if (v == 1)
 					LoadSave();
@@ -231,6 +275,39 @@ void Quit() {
 				break;
 			}
 			case 'S': {
+				if (v == 1)
+					v = 2;
+				else
+					if (v == 2)
+						v = 1;
+				break;
+			}
+			case 'ö': {
+				if (v == 1)
+					v = 2;
+				else
+					if (v == 2)
+						v = 1;
+				break;
+			}
+			case 'û': {
+				if (v == 1)
+					v = 2;
+				else
+					if (v == 2)
+						v = 1;
+
+				break;
+			}
+			case 'Ö': {
+				if (v == 1)
+					v = 2;
+				else
+					if (v == 2)
+						v = 1;
+				break;
+			}
+			case 'Û': {
 				if (v == 1)
 					v = 2;
 				else
@@ -336,6 +413,50 @@ void Menu() {
 				break;
 			}
 			case 'S': {
+				if (v == 1)
+					v = 2;
+				else
+					if (v == 2)
+						v = 3;
+					else
+						if (v == 3)
+							v = 1;
+				break;
+			}
+			case 'ö': {
+				if (v == 1)
+					v = 3;
+				else
+					if (v == 2)
+						v = 1;
+					else
+						if (v == 3)
+							v = 2;
+				break;
+			}
+			case 'û': {
+				if (v == 1)
+					v = 2;
+				else
+					if (v == 2)
+						v = 3;
+					else
+						if (v == 3)
+							v = 1;
+				break;
+			}
+			case 'Ö': {
+				if (v == 1)
+					v = 3;
+				else
+					if (v == 2)
+						v = 1;
+					else
+						if (v == 3)
+							v = 2;
+				break;
+			}
+			case 'Û': {
 				if (v == 1)
 					v = 2;
 				else
