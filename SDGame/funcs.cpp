@@ -479,6 +479,28 @@ void Menu() {
 							v = 1;
 				break;
 			}
+			case 72: {
+				if (v == 1)
+					v = 3;
+				else
+					if (v == 2)
+						v = 1;
+					else
+						if (v == 3)
+							v = 2;
+				break;
+			}
+			case 80: {
+				if (v == 1)
+					v = 2;
+				else
+					if (v == 2)
+						v = 3;
+					else
+						if (v == 3)
+							v = 1;
+				break;
+			}
 			case 13: {
 				if (v == 1)
 					Start();
