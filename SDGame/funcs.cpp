@@ -51,7 +51,7 @@ using namespace ::std;
 	}
  }
 
- //1.Старт
+ //1. Старт
 void Start() {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 	system("cls");
@@ -59,9 +59,15 @@ void Start() {
 	cout << "Выберите персонажа:";
 	//Просто бесконечный цикл
 	while (z != 111) {
+		gotoxy(47, 13);
+		cout << " ДИМА ";
+		gotoxy(47, 15);
+		cout << "СЕРГЕЙ";
+		gotoxy(47, 17);
+		cout << " ВОВА";
 	}
 }
- //2.Загрузить сохранение
+ //2. Загрузить сохранение
 void Load() {
 	v = 1;
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
@@ -223,7 +229,7 @@ void Load() {
 
 	}
 }
- //3.Выход из игры
+ //3. Выход из игры
 void Quit() {
 	v = 1;
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
@@ -342,6 +348,7 @@ void Quit() {
 	}
 
 }
+ //4. Меню
 void Menu() {
 	v = 1;
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
