@@ -58,14 +58,15 @@ v = 1;
 	system("cls");
 	gotoxy(41, 7);
 	cout << "Âûáåðèòå ïåðñîíàæà:";
+	gotoxy(47, 13);
+	cout << " ÄÈÌÀ ";
+	gotoxy(47, 15);
+	cout << "ÑÅÐÃÅÉ";
+	gotoxy(47, 17);
+	cout << " ÂÎÂÀ";
 	//Ïðîñòî áåñêîíå÷íûé öèêë
 	while (z != 111) {
-		gotoxy(47, 13);
-		cout << " ÄÈÌÀ ";
-		gotoxy(47, 15);
-		cout << "ÑÅÐÃÅÉ";
-		gotoxy(47, 17);
-		cout << " ÂÎÂÀ";
+		
 
 		if (v == 1) {
 			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
