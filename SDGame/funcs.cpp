@@ -218,15 +218,15 @@ v = 1;
 				break;
 			}
 			case 13: {
-				if (v == 1)
+			/*	if (v == 1)
 					Start();
 				else
 					if (v == 2)
-						Load();
+						Load();   //Закоменчено ибо был баг
 					else
 						if (v == 3)
 							Quit();
-				break;
+				break;*/
 			}
 			}
 
