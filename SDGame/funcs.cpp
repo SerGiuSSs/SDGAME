@@ -53,8 +53,14 @@ using namespace ::std;
 
  //1.Старт
 void Start() {
-	gotoxy(50, 7);
-	cout << "Выберите персонажа";
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+	system("cls");
+	gotoxy(41, 7);
+	cout << "Выберите персонажа:";
+	//Просто бесконечный цикл
+	while (z != 111) {
+
+	}
 }
  //2.Загрузить сохранение
 void Load() {
