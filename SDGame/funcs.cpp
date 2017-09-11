@@ -8,6 +8,7 @@ using namespace ::std;
 
  int z, v ;
 
+ //Убирает курсор
  void Blinking(int off)
  {
 	 void* handle = GetStdHandle(STD_OUTPUT_HANDLE);
@@ -16,6 +17,7 @@ using namespace ::std;
 	 structCursorInfo.bVisible = FALSE;
 	 SetConsoleCursorInfo(handle, &structCursorInfo);
  }
+ //Позиционирование
  void gotoxy(int xpos, int ypos)
  {
 	 COORD scrn;
@@ -26,13 +28,14 @@ using namespace ::std;
 
 	 SetConsoleCursorPosition(hOuput, scrn);
  }
+ //Просто настройка и включение русского в консоли
  void podgotovka() {
 	 system("mode con cols=101 lines=30");
 	 setlocale(LC_ALL, "Russian");
 	 Blinking();
 	 v = 1;
  }
-
+ //Загрузка сохранений(В разработке)
  void LoadSave()
  {
 	 switch (v) {
@@ -48,7 +51,7 @@ using namespace ::std;
 	}
  }
 
-
+ //1.Старт
 void Start() {
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 	system("cls");
@@ -58,6 +61,7 @@ void Start() {
 	while (z != 111) {
 	}
 }
+ //2.Загрузить сохранение
 void Load() {
 	v = 1;
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
@@ -219,6 +223,7 @@ void Load() {
 
 	}
 }
+ //3.Выход из игры
 void Quit() {
 	v = 1;
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
