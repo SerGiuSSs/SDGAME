@@ -28,7 +28,7 @@ using namespace ::std;
 
 	 SetConsoleCursorPosition(hOuput, scrn);
  }
- //Просто настройка и включение русского в консоли
+ //Просто настройка и включение русского в консоли ,,
  void podgotovka() {
 	 system("mode con cols=101 lines=30");
 	 setlocale(LC_ALL, "Russian");
