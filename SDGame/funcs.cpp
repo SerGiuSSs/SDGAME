@@ -28,7 +28,7 @@ using namespace ::std;
 
 	 SetConsoleCursorPosition(hOuput, scrn);
  }
- //Просто настройка и включение русского в консоли ,,
+ //Просто настройка и включение русского в консоли
  void podgotovka() {
 	 system("mode con cols=101 lines=30");
 	 setlocale(LC_ALL, "Russian");
@@ -52,7 +52,7 @@ using namespace ::std;
  }
 
  //1. Старт
-void Start() {
+ void Start() {
 v = 1;
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 	system("cls");
@@ -234,7 +234,7 @@ v = 1;
 }
 }
  //2. Загрузить сохранение
-void Load() {
+ void Load() {
 	v = 1;
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 	system("cls");
@@ -416,9 +416,9 @@ void Load() {
 
 
 	}
-}
+ }
  //3. Выход из игры
-void Quit() {
+ void Quit() {
 	v = 1;
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 	system("cls");
@@ -551,9 +551,9 @@ void Quit() {
 
 	}
 
-}
+ }
  //4. Меню
-void Menu() {
+ void Menu() {
 	v = 1;
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 	gotoxy(46, 13);
@@ -565,7 +565,7 @@ void Menu() {
 	// Просто бесконечный цикл
 	while (z != 111) {
 
-		// Стрелочки выбора
+		// Подсветка выбора
 		if (v == 1) {
 
 			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
@@ -654,6 +654,7 @@ void Menu() {
 					else
 						if (v == 3)
 							v = 2;
+					cout << "ku";
 				break;
 			}
 			case 'ы': {
