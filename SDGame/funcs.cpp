@@ -67,7 +67,7 @@ v = 1;
 	//Просто бесконечный цикл
 	while (z != 111) {
 		
-
+		// Подсветка выбора
 		if (v == 1) {
 			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 
@@ -80,7 +80,7 @@ v = 1;
 			cout << " ДИМА ";
 		}
 		else
-			if (v == 2) {
+		if (v == 2) {
 				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 				gotoxy(47, 13);
 				cout << " ДИМА ";
@@ -91,8 +91,8 @@ v = 1;
 				gotoxy(47, 15);
 				cout << "СЕРГЕЙ";
 			}
-			else
-				if (v == 3) {
+		else
+		if (v == 3) {
 					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 					gotoxy(47, 13);
 					cout << " ДИМА ";
@@ -244,9 +244,9 @@ v = 1;
 	cout << "2 Cохранение";
 	gotoxy(44,17);
 	cout << "3 Cохранение";
-	//Бесконечный цикл
+	// Просто бесконечный цикл
 	while (z != 111) {
-
+		// Подсветка выбора
 		if (v == 1) {
 			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 			gotoxy(44, 15);
@@ -428,10 +428,10 @@ v = 1;
 	cout << "              ДА";
 	gotoxy(36, 16);
 	cout << "             НЕТ";
-
+	// Просто бесконечный цикл
 	while (z != 111) {
 
-		// Стрелочки выбора
+		// Подсветка выбора
 		if (v == 1) {
 			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 			gotoxy(36, 16);
