@@ -6,7 +6,8 @@
 
 using namespace ::std;
 
- int z, v ;
+ int z, v, cti;
+ char c;
 
  //Убирает курсор
  void Blinking(int off)
@@ -151,7 +152,7 @@ v = 1;
 							v = 1;
 				break;
 			}
-			case 'ц': {
+			case 230: {
 				if (v == 1)
 					v = 3;
 				else
@@ -162,7 +163,7 @@ v = 1;
 							v = 2;
 				break;
 			}
-			case 'ы': {
+			case 235: {
 				if (v == 1)
 					v = 2;
 				else
@@ -173,7 +174,7 @@ v = 1;
 							v = 1;
 				break;
 			}
-			case 'Ц': {
+			case 150: {
 				if (v == 1)
 					v = 3;
 				else
@@ -184,7 +185,7 @@ v = 1;
 							v = 2;
 				break;
 			}
-			case 'Ы': {
+			case 155: {
 				if (v == 1)
 					v = 2;
 				else
@@ -222,7 +223,7 @@ v = 1;
 					Start();
 				else
 					if (v == 2)
-						Load();   //Закоменчено ибо был баг
+						Load();   //Закоменчено ибо был баг // ДА НЕ БАГ ЭТО!
 					else
 						if (v == 3)
 							Quit();
@@ -327,7 +328,7 @@ void Load() {
 							v = 1;
 				break;
 			}
-			case 'ц': {
+			case 230: {
 				if (v == 1)
 					v = 3;
 				else
@@ -338,7 +339,7 @@ void Load() {
 							v = 2;
 				break;
 			}
-			case 'ы': {
+			case 235: {
 				if (v == 1)
 					v = 2;
 				else
@@ -349,7 +350,7 @@ void Load() {
 							v = 1;
 				break;
 			}
-			case 'Ц': {
+			case 150: {
 				if (v == 1)
 					v = 3;
 				else
@@ -360,7 +361,7 @@ void Load() {
 							v = 2;
 				break;
 			}
-			case 'Ы': {
+			case 155: {
 				if (v == 1)
 					v = 2;
 				else
@@ -487,7 +488,7 @@ void Quit() {
 						v = 1;
 				break;
 			}
-			case 'ц': {
+			case 230: {
 				if (v == 1)
 					v = 2;
 				else
@@ -495,7 +496,7 @@ void Quit() {
 						v = 1;
 				break;
 			}
-			case 'ы': {
+			case 235: {
 				if (v == 1)
 					v = 2;
 				else
@@ -504,7 +505,7 @@ void Quit() {
 
 				break;
 			}
-			case 'Ц': {
+			case 150: {
 				if (v == 1)
 					v = 2;
 				else
@@ -512,7 +513,7 @@ void Quit() {
 						v = 1;
 				break;
 			}
-			case 'Ы': {
+			case 155: {
 				if (v == 1)
 					v = 2;
 				else
@@ -565,7 +566,7 @@ void Menu() {
 	// Просто бесконечный цикл
 	while (z != 111) {
 
-		// Стрелочки выбора
+		// Подсветка выбора
 		if (v == 1) {
 
 			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
@@ -600,6 +601,7 @@ void Menu() {
 
 		// Это обработчик нажатий
 		if (_kbhit()) {
+
 			switch (_getch()) {
 			case 'w': {
 				if (v == 1)
@@ -645,7 +647,7 @@ void Menu() {
 							v = 1;
 				break;
 			}
-			case 'ц': {
+			case 230: {
 				if (v == 1)
 					v = 3;
 				else
@@ -656,7 +658,7 @@ void Menu() {
 							v = 2;
 				break;
 			}
-			case 'ы': {
+			case 235: {
 				if (v == 1)
 					v = 2;
 				else
@@ -667,7 +669,7 @@ void Menu() {
 							v = 1;
 				break;
 			}
-			case 'Ц': {
+			case 150: {
 				if (v == 1)
 					v = 3;
 				else
@@ -678,7 +680,7 @@ void Menu() {
 							v = 2;
 				break;
 			}
-			case 'Ы': {
+			case 155: {
 				if (v == 1)
 					v = 2;
 				else
