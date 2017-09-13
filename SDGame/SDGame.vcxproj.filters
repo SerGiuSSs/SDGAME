@@ -28,7 +28,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\x64\Debug\Save1.txt">
+    <Text Include="Save1.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
   </ItemGroup>

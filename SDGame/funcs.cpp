@@ -1,6 +1,9 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
+#include <fstream>
 #include <Windows.h>
 #include <conio.h>
+#include <cstdio>
 #include <cstdlib>
 #include "main.h"
 
@@ -40,15 +43,17 @@ using namespace ::std;
 		 v = 1;
 	 }
 	//Загрузка сохранений(В разработке)
-	void LoadSave()
-	 {
+	void LoadSave() {
 		int ProverkaSave[3];
 		 freopen("Save1.txt", "r", stdin);
 		 cin >> ProverkaSave[1];
 		 if (ProverkaSave[1] == 1) {
-
+			 cout << "Save1";
 		 }
-		 freopen("Save2.txt", "r", stdin);
+		 else {
+			 cout << "No saves";
+		 }
+		 /*freopen("Save2.txt", "r", stdin);
 		 cin >> ProverkaSave[2];
 		 if (ProverkaSave[2] == 1) {
 
@@ -57,7 +62,7 @@ using namespace ::std;
 		 cin >> ProverkaSave[3];
 		 if (ProverkaSave[3] == 1) {
 
-		 }
+		 }*/
 		 switch (v) {
 		 case 1: {
 
@@ -70,7 +75,6 @@ using namespace ::std;
 		 }
 		}
 	 }
-	
 	// Выбор сохранения сохранения
 	void SelectLoad(){
 
