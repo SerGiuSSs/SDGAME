@@ -56,7 +56,7 @@ using namespace ::std;
 	 }
 	
 	// Выбор сохранения сохранения
-	void SelectLoad() {
+	void SelectLoad(){
 
 		v = 1;
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
@@ -618,7 +618,7 @@ using namespace ::std;
 			}
 		}
 	 }
-	// Выход из игры
+	// Выход из игрылол
 	void Quit() {
 		v = 1;
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
