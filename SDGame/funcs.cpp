@@ -244,6 +244,11 @@ using namespace ::std;
 					Start();
 					break;
 				}
+				case 27: {
+				system("cls");
+					Start();
+					break;
+				}
 				}
 			}
 		}		
@@ -251,7 +256,7 @@ using namespace ::std;
 	}
 	// Старт
 	void Start() {
-	v = 1;
+		v = 1;
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 		system("cls");
 		gotoxy(41, 7);
@@ -437,7 +442,13 @@ using namespace ::std;
 				Menu();
 				break;
 				}
+				case 27: {
+				system("cls");
+					Menu();
+					break;
 				}
+				}
+
 
 		}
 
@@ -617,6 +628,11 @@ using namespace ::std;
 				}
 				case 8: {
 
+				system("cls");
+					Menu();
+					break;
+				}
+				case 27: {
 				system("cls");
 					Menu();
 					break;
