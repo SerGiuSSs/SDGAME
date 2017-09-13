@@ -44,17 +44,17 @@ using namespace ::std;
 	 {
 		int ProverkaSave[3];
 		 freopen("Save1.txt", "r", stdin);
-		 cin << ProverkaSave[1];
+		 cin >> ProverkaSave[1];
 		 if (ProverkaSave[1] == 1) {
 
 		 }
 		 freopen("Save2.txt", "r", stdin);
-		 cin << ProverkaSave[2];
+		 cin >> ProverkaSave[2];
 		 if (ProverkaSave[2] == 1) {
 
 		 }
 		 freopen("Save2.txt", "r", stdin);
-		 cin << ProverkaSave[3];
+		 cin >> ProverkaSave[3];
 		 if (ProverkaSave[3] == 1) {
 
 		 }
