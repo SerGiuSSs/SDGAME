@@ -12,7 +12,7 @@ using namespace ::std;
 	enum Character {SerGiuS, Dima, Vova};
 	Character SelectedCharacter;
 
-	int z, v, ProverkaSave[3];;
+	int z, v, ProverkaSave[3], Save[100];
 	
 
 	//Убирает курсор
@@ -46,7 +46,10 @@ using namespace ::std;
 	void LoadSave() {
 		 switch (v) {
 		 case 1: {
-
+			//обнуление
+			/*ofstream rewrite("Save1.txt"); 
+			rewrite.write("", 0); 
+			rewrite.close();*/ 
 		 }
 		 case 2: {
 
