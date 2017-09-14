@@ -31,5 +31,11 @@
     <Text Include="Save1.txt">
       <Filter>Файлы ресурсов</Filter>
     </Text>
+    <Text Include="Save2.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="Save3.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
   </ItemGroup>
 </Project>

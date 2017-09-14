@@ -123,6 +123,8 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="Save1.txt" />
+    <Text Include="Save2.txt" />
+    <Text Include="Save3.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
