@@ -44,11 +44,11 @@ using namespace ::std;
 	 {
 		int ProverkaSave[3];
 		 freopen("Save1.txt", "r", stdin);
-		 cin >> ProverkaSave[1];
+		 cin << ProverkaSave[1];
 		 freopen("Save2.txt", "r", stdin);
-		 cin >> ProverkaSave[2];
+		 cin << ProverkaSave[2];
 		 freopen("Save2.txt", "r", stdin);
-		 cin >> ProverkaSave[3];
+		 cin << ProverkaSave[3];
 		 switch (v) {
 		 case 1: {
 
