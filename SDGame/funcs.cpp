@@ -12,7 +12,7 @@ using namespace ::std;
 	enum Character {SerGiuS, Dima, Vova};
 	Character SelectedCharacter;
 
-	int z, v, ProverkaSave[3], Save[100];
+	int z, v, ProverkaSave[3], Save[100], CurSave;
 	
 
 	//Убирает курсор
@@ -44,7 +44,7 @@ using namespace ::std;
 	 }
 	//Загрузка сохранений(В разработке)
 	void LoadSave() {
-		 switch (v) {
+		 switch (CurSave) {
 		 case 1: {
 			//обнуление
 			/*ofstream rewrite("Save1.txt"); 
@@ -59,8 +59,8 @@ using namespace ::std;
 		 }
 		}
 	 }
-	// Выбор сохранения сохранения
-	void SelectLoad(){
+	// Выбор сохранения
+	void SelectLoad()                                                                 {
 
 		v = 1;
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
