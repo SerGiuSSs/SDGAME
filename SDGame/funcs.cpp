@@ -1,6 +1,9 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
+#include <fstream>
 #include <Windows.h>
 #include <conio.h>
+#include <cstdio>
 #include <cstdlib>
 #include "main.h"
 
@@ -9,8 +12,8 @@ using namespace ::std;
 	enum Character {SerGiuS, Dima, Vova};
 	Character SelectedCharacter;
 
-	int z, v;
-
+	int z, v, ProverkaSave[3];;
+	
 
 	//Убирает курсор
 	void Blinking(int off)
@@ -40,15 +43,7 @@ using namespace ::std;
 		 v = 1;
 	 }
 	//Загрузка сохранений(В разработке)
-	void LoadSave()
-	 {
-		int ProverkaSave[3];
-		 freopen("Save1.txt", "r", stdin);
-		 cin << ProverkaSave[1];
-		 freopen("Save2.txt", "r", stdin);
-		 cin << ProverkaSave[2];
-		 freopen("Save2.txt", "r", stdin);
-		 cin << ProverkaSave[3];
+	void LoadSave() {
 		 switch (v) {
 		 case 1: {
 
@@ -61,7 +56,6 @@ using namespace ::std;
 		 }
 		}
 	 }
-	
 	// Выбор сохранения сохранения
 	void SelectLoad(){
 
@@ -78,6 +72,49 @@ using namespace ::std;
 		cout << "2 Cохранение";
 		gotoxy(44,17);
 		cout << "3 Cохранение";
+
+		// Проверка сохранений
+		freopen("Save1.txt", "r", stdin);
+		cin >> ProverkaSave[1];
+		fclose(stdin);
+		if (ProverkaSave[1] == 1) {
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 11);
+			gotoxy(58, 13);
+			cout << "===";
+		}
+		else {
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+			gotoxy(58, 15);
+			cout << "===";
+		}
+		freopen("Save2.txt", "r", stdin);
+		cin >> ProverkaSave[2];
+		fclose(stdin);
+		if (ProverkaSave[2] == 1) {
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 11);
+			gotoxy(58, 15);
+			cout << "===";
+		}
+		else {
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+			gotoxy(58, 15);
+			cout << "===";
+		}
+		freopen("Save3.txt", "r", stdin);
+		cin >> ProverkaSave[3];
+		fclose(stdin);
+		if (ProverkaSave[3] == 1) {
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 11);
+			gotoxy(58, 17);
+			cout << "===";
+		}
+		else {
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+			gotoxy(58, 17);
+			cout << "===";
+		}
+		// Закончилась проверка сохранений
+
 		// Просто бесконечный цикл
 		while (z != 111) {
 
@@ -459,12 +496,56 @@ using namespace ::std;
 		v = 1;
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
 		system("cls");
+
 		gotoxy(44,13);
 		cout << "1 Cохранение";
 		gotoxy(44,15);
 		cout << "2 Cохранение";
 		gotoxy(44,17);
 		cout << "3 Cохранение";
+		
+		// Проверка сохранений
+			freopen("Save1.txt", "r", stdin);
+			cin >> ProverkaSave[1];
+			fclose(stdin);
+			if (ProverkaSave[1] == 1) {
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 11);
+				gotoxy(58, 13);
+				cout << "===";
+			}
+			else {
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+				gotoxy(58, 15);
+				cout << "===";
+			}
+			freopen("Save2.txt", "r", stdin);
+			cin >> ProverkaSave[2];
+			fclose(stdin);
+			if (ProverkaSave[2] == 1) {
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 11);
+				gotoxy(58, 15);
+				cout << "===";
+			}
+			else {
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+				gotoxy(58, 15);
+				cout << "===";
+			}
+			freopen("Save3.txt", "r", stdin);
+			cin >> ProverkaSave[3];
+			fclose(stdin);
+			if (ProverkaSave[3] == 1) {
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 11);
+				gotoxy(58,17);
+				cout << "===";
+			}
+			else {
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+				gotoxy(58, 17);
+				cout << "===";
+			}
+		// Закончилась проверка сохранений
+
 		// Просто бесконечный цикл
 		while (z != 111) {
 
