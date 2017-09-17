@@ -645,7 +645,7 @@ v = 1;
 							v = 1;
 				break;
 			}
-			case 'ö': {
+			case -26: {
 				if (v == 1)
 					v = 3;
 				else
@@ -657,7 +657,7 @@ v = 1;
 					cout << "ku";
 				break;
 			}
-			case 'û': {
+			case -21: {
 				if (v == 1)
 					v = 2;
 				else
